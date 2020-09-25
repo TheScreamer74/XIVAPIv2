@@ -7,4 +7,14 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <style name="Widget.AppTheme.TextButton" parent="Widget.MaterialComponents.Button.TextButton">
+        <item name="android:textAppearance">TextButton</item>
+        <item name="android:paddingTop">@dimen/margin_small</item>
+        <item name="android:paddingBottom">@dimen/margin_small</item>
+        <item name="android:paddingStart">@dimen/margin_small</item>
+        <item name="android:paddingEnd">@dimen/margin_small</item>
+        <item name="textAllCaps">false</item>
+        <item name="android:textColor">@color/com_facebook_primary_button_text_color</item>
+    </style>
+
 </resources>
