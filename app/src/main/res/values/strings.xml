@@ -1,9 +1,9 @@
 <resources>
     <string name="app_name">XIVAPIv2</string>
-<<<<<<< HEAD
+
     <string name="facebook_app_id">333935197860518</string> <string name="fb_login_protocol_scheme">fb333935197860518</string>
 
-=======
+
     <string name="server_client_id">419486810473-av879na9fildetv01p61op2ev1bfabmd.apps.googleusercontent.com</string>
->>>>>>> ft/Login-Google
+
 </resources>

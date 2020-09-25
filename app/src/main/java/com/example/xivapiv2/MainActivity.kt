@@ -1,26 +1,18 @@
 package com.example.xivapiv2
 
-<<<<<<< HEAD
 
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
-import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import com.facebook.CallbackManager
 import com.facebook.FacebookCallback
 import com.facebook.FacebookException
-import com.facebook.FacebookSdk
-import com.facebook.appevents.AppEventsLogger
 import com.facebook.login.LoginManager
 import com.facebook.login.LoginResult
 import com.facebook.login.widget.LoginButton
 
-=======
-import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
-import android.os.Bundle
-import android.util.Log
+
 import android.widget.Button
 import com.google.android.gms.auth.api.signin.GoogleSignIn
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount
@@ -32,7 +24,6 @@ import kotlinx.android.synthetic.main.activity_main.*
 
 lateinit var mGoogleSignInClient: GoogleSignInClient
 private val RC_SIGN_IN = 9001
->>>>>>> ft/Login-Google
 
 class MainActivity : AppCompatActivity() {
 
@@ -42,7 +33,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-<<<<<<< HEAD
+
         callbackManager = CallbackManager.Factory.create()
 
         val loginButton = findViewById<LoginButton>(R.id.login_button)
@@ -67,10 +58,6 @@ class MainActivity : AppCompatActivity() {
             
         })
 
-
-
-
-=======
 
         val gso = GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
             .requestIdToken(getString(R.string.server_client_id))
@@ -104,6 +91,7 @@ class MainActivity : AppCompatActivity() {
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
+        callbackManager.onActivityResult(requestCode, resultCode, data)
         if (requestCode == RC_SIGN_IN) {
             val task =
                 GoogleSignIn.getSignedInAccountFromIntent(data)
@@ -144,13 +132,8 @@ class MainActivity : AppCompatActivity() {
                 "failed code=", e.statusCode.toString()
             )
         }
->>>>>>> ft/Login-Google
     }
 
 
-    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
-        callbackManager.onActivityResult(requestCode, resultCode, data)
-        super.onActivityResult(requestCode, resultCode, data)
-    }
 
 }
